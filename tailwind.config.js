@@ -6,7 +6,23 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    colors: {
+      'primary': '#7C3C33',
+      'secondary-a': '#FFD5D7',
+      'secondary-b': '#FFEBEC',
+      'light': '#FFF5F6',
+      'dark': '#0D0D0D'
+    },
+
+    extend: {
+      backgroundImage: {
+        'marmoleado': "url('../public/bg.png')"
+      },
+
+      fontFamily: {
+        lobsterTwo: ['var(--font-lobster-two)']
+      }
+    }
   },
   plugins: [],
 };
