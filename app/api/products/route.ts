@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import commerce from '../../lib/commerce';
+import commerce from '@lib/commerce';
 
 export async function GET(req: Request) {
   const { data } = await commerce.products.list();
