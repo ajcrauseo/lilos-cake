@@ -1,11 +1,14 @@
+import LogoHeader from '@components/LogoHeader';
+
 export default function MenuLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <main className='relative'>
+      <LogoHeader />
       {children}
-    </div>
+    </main>
   );
 }

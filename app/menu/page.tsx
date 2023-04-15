@@ -10,8 +10,8 @@ const getProducts = async () => {
   // Incremental Static Regeneration (ISR)
   const response = await fetch('http://localhost:3000/api/products', {
     next: {
-      revalidate: 60
-    }
+      revalidate: 60,
+    },
   });
 
   const data = await response.json();
@@ -24,12 +24,13 @@ export default async function Menu() {
   const [{ data: products }] = await Promise.all([productsData]);
 
   return (
-    <main className='flex flex-col items-center pt-14 p-6 bg-light gap-6 relative'>
+    <div className='flex flex-col items-center p-6 pt-3 bg-light gap-6 relative md:pt-14'>
       <h2 className='mb-2 font-lobsterTwo text-3xl'>Menú</h2>
-
-      {products.map((product: TProduct) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </main>
+      <section className='w-full flex flex-wrap justify-center gap-6'>
+        {products.map((product: TProduct) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </section>
+    </div>
   );
 }
