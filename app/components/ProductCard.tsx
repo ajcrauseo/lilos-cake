@@ -4,7 +4,8 @@ import { TProduct } from '@/index';
 import Image from 'next/image';
 import { useState } from 'react';
 
-import { MdClose } from 'react-icons/md';
+import { BsX } from "react-icons/bs";
+
 
 type Props = {
   product: TProduct;
@@ -54,7 +55,7 @@ const ProductCard = ({ product }: Props) => {
       {/* DETALLES MOBILE */}
       {showDescription && (
         <div className='bg-secondary-a bg-opacity-80 backdrop-blur-sm absolute top-0 h-full w-full rounded-xl p-5 shadow-lg text-dark md:hidden'>
-          <MdClose onClick={handleShowDescription} className='text-2xl mb-10' />
+          <BsX onClick={handleShowDescription} className='text-2xl mb-10' />
           <div className='flex flex-col h-3/4 justify-between text-center'>
             <div>
               {/* TITULO */}

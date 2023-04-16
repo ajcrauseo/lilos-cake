@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { MdArrowForwardIos, MdClose } from 'react-icons/md';
+import { BsChevronRight, BsX } from "react-icons/bs";
+
 
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +15,13 @@ const NavbarMobile = () => {
   return (
     <div>
       {isOpen && (
-        <MdClose
+        <BsX
           className='fixed z-40 left-3 top-3 text-3xl md:hidden'
           onClick={handleIsOpen}
         />
       )}
       {!isOpen && (
-        <MdArrowForwardIos
+        <BsChevronRight
           className={'fixed z-40 left-3 top-3 text-3xl md:hidden'}
           onClick={handleIsOpen}
         />

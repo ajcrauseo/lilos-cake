@@ -7,6 +7,7 @@ import './globals.css';
 
 import NavbarMobile from '@components/NavbarMobile';
 import NavbarDesktop from '@components/NavbarDesktop';
+import Footer from '@components/Footer';
 
 export const metadata = {
   title: "Lilo's Cake",
@@ -47,6 +48,7 @@ export default function RootLayout({
           </Link> */}
         </header>
         {children}
+        <Footer />
       </body>
     </html>
   );
