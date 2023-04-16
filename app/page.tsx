@@ -7,7 +7,7 @@ import triangule from '@public/triangule.png';
 
 export default function Home() {
   return (
-    <main className='min-h-screen relative bg-marmoleado bg-cover'>
+    <main className='min-h-screen relative bg-mobile bg-cover md:bg-desktop'>
       <Image alt='triangulo' src={triangule} className='w-96 absolute z-0' />
 
       <div className='relative z-10 grid grid-cols-1 md:grid-cols-2 place-items-center min-h-screen'>
@@ -22,7 +22,7 @@ export default function Home() {
           href='/menu'
           className=' bg-primary font-lobsterTwo text-lg text-light text-center py-4 px-8 rounded-full w-56 md:col-start-1 md:self-baseline md:mt-24'
         >
-          Conocer el menú
+          Conoce el menú
         </Link>
 
         <Image

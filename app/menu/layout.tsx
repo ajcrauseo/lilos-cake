@@ -6,7 +6,7 @@ export default function MenuLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className='relative'>
+    <main className='relative bg-light'>
       <LogoHeader />
       {children}
     </main>

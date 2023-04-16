@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        marmoleado: "url('../public/bg.png')",
+        mobile: "url('../public/bg-mobile.jpg')",
+        desktop: "url('../public/bg-desktop.jpg')",
       },
 
       fontFamily: {

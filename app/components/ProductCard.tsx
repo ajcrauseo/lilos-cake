@@ -20,7 +20,7 @@ const ProductCard = ({ product }: Props) => {
   return (
     <div className='relative w-[320px] h-[450px] grid grid-rows-5 grid-cols-2 rounded-xl p-5 bg-secondary-a font-lobsterTwo text-dark shadow-xl md:w-[460px] md:h-[220px] md:grid-cols-4 md:p-2'>
       {/* IMAGEN */}
-      <div className='w-[280px] h-auto bg-slate-400 rounded row-span-3 md:w-[180px] md:h-auto md:row-span-5 md:col-span-2 md:place-self-center'>
+      <div className='w-[280px] h-auto bg-slate-200 rounded row-span-3 md:w-[180px] md:h-auto md:row-span-5 md:col-span-2 md:place-self-center'>
         <Image
           src={product.image.url}
           alt={product.name}
@@ -46,9 +46,9 @@ const ProductCard = ({ product }: Props) => {
 
       <button
         onClick={handleShowDescription}
-        className='row-span-1 col-span-1 place-self-end border-2 border-primary w-[130px] py-1 mr-2 rounded-full text-lg md:hidden'
+        className='row-span-1 col-span-1 place-self-end border-2 border-primary w-[140px] py-1 mr-2 rounded-full text-lg md:hidden'
       >
-        Saber más...
+        Más detalles...
       </button>
 
       {/* DETALLES MOBILE */}

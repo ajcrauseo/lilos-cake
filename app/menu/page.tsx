@@ -19,12 +19,12 @@ const getProducts = async () => {
   return data;
 };
 
-export default async function Menu() {
+export default async function MenuPage() {
   const productsData = getProducts();
   const [{ data: products }] = await Promise.all([productsData]);
 
   return (
-    <div className='flex flex-col items-center p-6 pt-3 bg-light gap-6 relative md:pt-14'>
+    <div className='flex flex-col items-center p-6 pt-3 gap-6 relative md:pt-14'>
       <h2 className='mb-2 font-lobsterTwo text-3xl'>Menú</h2>
       <section className='w-full flex flex-wrap justify-center gap-6'>
         {products.map((product: TProduct) => (
