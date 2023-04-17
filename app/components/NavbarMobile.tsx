@@ -14,22 +14,23 @@ const NavbarMobile = () => {
   };
 
   return (
-    <div className='md:hidden'>
+    <div className='flex items-center md:hidden'>
       {isOpen && (
         <motion.div
-          whileTap={{ scale: 2 }}
+          whileTap={{ scale: 1.5 }}
           onClick={handleIsOpen}
-          className='fixed z-40 left-3 top-3 text-3xl md:hidden'
+          className='fixed z-40 left-3 top-[14px] text-3xl md:hidden'
         >
           <BsX />
         </motion.div>
       )}
       {!isOpen && (
         <motion.div
-          whileTap={{ scale: 0 }}
-          className='fixed z-40 left-3 top-3 text-3xl md:hidden'
+          whileTap={{ scale: 1.5 }}
+          className='fixed z-40 left-3 top-[14px] text-2xl md:hidden'
+          onClick={handleIsOpen}
         >
-          <BsChevronRight onClick={handleIsOpen} />
+          <BsChevronRight />
         </motion.div>
       )}
 
@@ -42,7 +43,7 @@ const NavbarMobile = () => {
             exit={{ opacity: 0, x: '-100%' }}
             transition={{ duration: 0.4 }}
           >
-            <ul className='bg-secondary-a bg-opacity-50 backdrop-blur-sm w-full flex justify-around py-4 pl-10 font-lobsterTwo text-xl text-dark'>
+            <ul className='bg-secondary-a bg-opacity-50 backdrop-blur-sm w-full flex justify-around items-center py-4 pl-10 font-lobsterTwo text-xl text-dark'>
               <motion.li whileTap={{ scale: 0.9 }}>
                 <Link href='/' onClick={handleIsOpen}>
                   Inicio
