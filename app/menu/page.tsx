@@ -3,7 +3,7 @@ import { TProduct } from '@/index';
 
 const getProducts = async () => {
   // SSR
-  const response = await fetch('http://localhost:3000/api/products', {
+  const response = await fetch('https://lilos-cake.vercel.app/api/products', {
     cache: 'no-store',
   });
 
