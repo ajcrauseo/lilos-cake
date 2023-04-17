@@ -3,16 +3,16 @@ import { TProduct } from '@/index';
 
 const getProducts = async () => {
   // SSR
-  // const response = await fetch('http://localhost:3000/api/products', {
-  //   cache: 'no-store',
-  // });
+  const response = await fetch('http://localhost:3000/api/products', {
+    cache: 'no-store',
+  });
 
   // Incremental Static Regeneration (ISR)
-  const response = await fetch('https://lilos-cake.vercel.app/api/products', {
-    next: {
-      revalidate: 60,
-    },
-  });
+  // const response = await fetch('https://lilos-cake.vercel.app/api/products', {
+  //   next: {
+  //     revalidate: 60,
+  //   },
+  // });
 
   const data = await response.json();
 
